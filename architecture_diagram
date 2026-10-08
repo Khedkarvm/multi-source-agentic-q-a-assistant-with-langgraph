@@ -1,0 +1,17 @@
+// LangGraph Multi-Agent Architecture
+digraph {
+	U [label=User]
+	G [label=Guardrail]
+	S [label="Supervisor Agent"]
+	SQL [label="SQL Agent
+Northwind DB"]
+	RAG [label="RAG Agent
+PubMed"]
+	UI [label="Streamlit UI"]
+	U -> G
+	G -> S
+	S -> SQL [label="SQL Route"]
+	S -> RAG [label="RAG Route"]
+	SQL -> UI
+	RAG -> UI
+}
